@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Chapter 8</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+<script src="../jquery-1.6.2.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<form id="search" action="search/index.php" method="get">
+	<label for="search-text">search the site</label>
+	<input type="text" name="search-text" id="search-text" />
+</form>
+
+<form id="contact">
+<fieldset>
+	<legend>Personal Info</legend>
+	<ol>
+		<li>
+			<label for="first-name">First Name</label>
+			<input class="required" type="text" name="first-name" id="first-name" /> 
+			<span>(required)</span>
+		</li>
+		<li>
+			<label for="last-name">Last Name</label>
+			<input class="required" type="text" name="last-name" id="last-name" /> 
+			<span>(required)</span></li>
+		<li>
+			How would you like to be contacted? (choose at least one method)
+			<ul>
+				<li>
+					<label for="by-email">
+						<input type="checkbox" name="by-contact-type" value="E-mail" id="by-email" />
+						by E-Mail
+					</label>
+					<input class="conditional" type="text" name="email" id="email" /> 
+					<span>(required when corresponding checkbox checked)</span>
+				</li>
+				<li>
+					<label for="by-phone">
+						<input type="checkbox" name="by-contact-type" value="Phone" id="by-phone" />
+						by Phone&nbsp;
+					</label>
+					<input class="conditional" type="text" name="phone"id="phone" /> 
+					<span>(required when corresponding checkbox checked)</span>
+				</li>
+				<li>
+					<label for="by-fax">
+						<input type="checkbox" name="by-contact-type" value="Fax" id="by-fax" /> 
+						by Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</label>
+					<input class="conditional" type="text" name="fax" id="fax" /> 
+					<span>(required when corresponding checkbox checked)</span>
+				</li>
+			</ul>
+		</li>
+	</ol>
+</fieldset>
+
+<fieldset>
+	<legend>Miscellaneous</legend>
+	<ol>
+		<li class="discover">How did you discover us?(Check all that apply)
+			<ul>
+				<li><label><input type="checkbox" name="discover" />Megazine</label></li>
+				<li><label><input type="checkbox" name="discover" />Website</label></li>
+				<li><label><input type="checkbox" name="discover" />Television</label></li>
+			</ul>
+		</li>
+	</ol>
+</fieldset>
+
+</form>
+
+</body>
+</html>

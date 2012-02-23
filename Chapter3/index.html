@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+#switcher {
+	float: right;
+	background-color: aqua;
+	padding: 10px;
+	border: 2px solid #999;
+}
+
+#switcher .hover {
+	cursor: pointer;
+	background-color: #afa;
+}
+
+.button {
+	float: left;
+	margin-right: 10px;
+	width: 120px;
+	padding: 10px;
+	background-color: #999;
+	text-align: center;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.large {
+	font-size: 1.5em;
+}
+
+.narrow {
+	width: 350px;
+	margin: 0 auto;
+}
+
+#texto {
+	clear: right;
+	float: left;
+}
+
+.selected {
+	font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+</style>
+
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	$('#switcher').click(function(event){
+		if (event.target == this) {
+			$('#switcher .button').toggleClass('hidden');
+		}
+	});
+	$('#switcher .button').click(function(event){
+		$('body').removeClass();
+		if (this.id == 'switcher-narrow') {
+			$('body').addClass('narrow');
+		}
+		if(this.id == 'switcher-large'){
+			$('body').addClass('large');
+		}
+		$('#switcher .button').removeClass('selected');
+		$(this).addClass('selected');
+		event.stopPropagation();
+	});
+});
+
+// -->
+</script>
+</head>
+<body>
+
+	<div id="switcher">
+		<h3>Style Switcher</h3>
+		<div class="button selected" id="switcher-normal">Normal</div>
+		<div class="button" id="switcher-narrow">Narrow Column</div>
+		<div class="button" id="switcher-large">Large Print</div>
+	</div>
+
+
+	<div id="texto">
+		Ok vai funcionar
+		<hr />
+	</div>
+
+</body>
+</html>

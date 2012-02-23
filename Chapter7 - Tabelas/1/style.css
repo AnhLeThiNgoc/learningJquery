@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.sortable {
+    float: left;
+    margin: 20px 0 0 50px;
+}
+
+.sortable thead {
+    background-color: #1155BA;
+    color: white;
+}
+.sortable thead th {
+    padding: 3px 10px;
+}
+.sortable tbody td {
+    padding: 0 10px;
+}
+
+.odd{
+	background-color: #EEEEEE;
+}
+
+.even{
+	background-color: #DDDDDD;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.sorted{
+	background-color: red;
+}

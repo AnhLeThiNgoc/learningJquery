@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+div.button{
+	width: 100px;
+	text-align:center;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-top:2px solid #999;
+	border-left:2px solid #999;
+	border-right:2px solid #666;
+	border-bottom:2px solid #666;
+}
+
+div.letters{
+	float: left;
+	margin-right: 30px;
+}
+
+div#dictionary {
+    width: 1000px;
+    float: left;
+    border: 3px solid;
+    padding: 15px;
+}
+
+div.entry {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+	
+}
+
+.term {
+    float: left;
+}
+
+.part {
+    margin-left: 15px;
+    margin-top: 21px;
+    float: left;
+    font-style: italic;
+}
+
+.definition {
+    clear: left;
+
+}
+
+.quote {
+    margin-left: 40px;
+    border-left: 2px solid;
+    padding-left: 18px;
+    margin-top: 10px
+}
+
+div#loading{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+}
+
+.highlighted{
+	background-color: yellow;
+}

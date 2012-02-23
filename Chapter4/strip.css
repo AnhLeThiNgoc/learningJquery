@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+
+html,body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#switcher {
+	position: relative;
+}
+
+.button {
+	position: relative;
+	width: 100px;
+	padding: 3px;
+	margin: .5em 0;
+	border-bottom: 1px solid red;
+	border-left: 1px solid orange;
+	border-right: 1px solid red;
+	border-top: 1px solid orange;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.button:HOVER {
+	background-color: orange;
+	color: white;
+}
+
+span.more {
+	font-size: 1.2em;
+	color: blue;
+}
+
+.label {
+	margin: 3px;
+	padding: 5px;
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: maroon;
+	color: white;
+	width: 150px;
+}
+
+div.speech {
+	clear: both;
+}

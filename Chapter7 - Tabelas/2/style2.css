@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+th.title{
+	width: 600px;
+}
+
+th.author{
+	width: 120px;
+}
+
+/* Sorted */
+
+tr.even,
+tr.first{
+	background-color:#EEE;
+	color: #000;
+}
+
+tr.odd,
+tr.second{
+	background-color: #DDD;
+	color: #000;
+}
+
+tr.third{
+	background-color: #CCC;
+}
+
+tr.highlight{
+	background-color: #ff6;
+}
+
+table.sortable thead th{
+	background-color: teal;
+	color: #FFF;
+}
+
+.sorted{
+	background-color: green;
+}
+
+/* Paginação */
+
+div.pager {
+  margin-bottom: .25em;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.page-number{
+  padding: .3em;
+  margin-right: .1em; 
+  border: 1px solid;
+  background-color: #345;
+  color: #FFF;
+}
+
+.active {
+  background: #ccf;
+  border: 1px solid #006;
+  color: #000;
+}
+
+/*  Rows Strip  */
+
+table.striped{
+	width: 1200px;
+}
+
+table.striped thead th{
+	padding: .3em;
+	background-color: #BBB;
+	color: #117;
+}
+
+table.striped tbody tr th{
+	background-color: #777;
+	text-align: left;
+	padding-left: .9em;
+}
+
+table.striped tbody tr td{
+	padding: .3em;
+}
+
+.tooltip {
+	position: absolute;
+	z-index: 2;
+	background: #efd;
+	border: 1px solid #ccc;
+	padding: 3px;
+}

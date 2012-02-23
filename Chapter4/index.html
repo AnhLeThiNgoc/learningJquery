@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link href="strip.css" type="text/css" rel="stylesheet" />
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	// invoca o valor do tamanho da fonte da classe speech ao clicar no botao switcher-large
+	$('div.button').click(function(){
+		var $speech = $('div.speech');
+		var currentSize = $speech.css('fontSize');
+		var num = parseFloat(currentSize, 10);  // parseFloat retorna o valor em numero e retira o que for caracter não numérico
+		var unit = currentSize.slice(-2); // retorna uma substring a dois caracteres antem do fim
+		if (this.id == 'switcher-large') {
+			num *= 1.4;
+		}
+		else if (this.id == 'switcher-small'){
+			num /= 1.4;
+		}
+		$speech.css('fontSize', num + unit);
+	});
+	
+	// esconde o segundo paragrafo da página
+	$('p:eq(1)').hide();
+	$('p:eq(3)').css('backgroundColor', '#fcf').hide();
+	$('p:eq(2)').css('backgroundColor', '#cff').click(function(){
+		var $thisPara = $(this);
+		$thisPara.next().slideDown('slow', function(){
+			$thisPara.slideUp('slow');
+		});
+	});
+	
+	// mostra o segundo paragrafo
+	$('span.more').click(function(){
+		//$('p:eq(1)').show('slow');
+		$('p:eq(1)').fadeIn('slow');
+		$(this).hide();
+	});
+	
+	// ao clicar na classe label a classe button ira crescer de tamanho
+	$('div.label').click(function(){
+		// pega todas as larguras...
+		var paraWidth = $('div.speech p').width();
+		var $button = $('div.button');
+		var buttonWidth = $button.width();
+		var paddingRight = $button.css('paddingRight');
+		var paddingLeft = $button.css('paddingLeft');
+		var borderRightWidth = $button.css('borderRightWidth');
+		var borderLeftWidth = $button.css('borderLeftWidth');
+		
+		//calcula o total de larguras...
+		var totalButtonWidth = parseInt(
+					buttonWidth, 10) + parseInt(paddingRight, 10) + parseInt(
+					paddingLeft, 10) + parseInt(borderRightWidth, 10) + 
+					parseInt(borderLeftWidth, 10);
+		var rightSide = paraWidth - totalButtonWidth;
+		//$('div.button').animate({left: rightSide, height: 38}, 'slow');
+		$('div.button')
+			.fadeTo('slow', 0.5)
+			.animate({left:rightSide}, 'slow')
+			.fadeTo('slow', 1.0, function(){
+				$(this).css('backgroundColor', '#f00');
+			});
+			
+	});
+	
+});
+
+// -->
+</script>
+
+</head>
+<body>
+
+	<div id="switcher">
+		<div class="label">Style Switcher</div>
+		<div class="button" id="switcher-large">Increase Text Size</div>
+		<div class="button" id="switcher-small">Decrease Text size</div>
+	</div>
+	<div class="speech">
+		<p>
+			Fourscore and seven years ago our fathers brought forth on this
+			continent a new nation, conceived in liberty, and dedicated to the
+			proposition that all men are created equal. <span class="more">.
+				. .</span>
+		</p>
+		<p>Now we are engaged in a great civil war, testing whether that
+			nation, or any nation so conceived and so dedicated, can long endure.
+			We are met on a great battlefield of that war. We have come to
+			dedicate a portion of that field as a final resting-place for those
+			who here gave their lives that the nation might live. It is
+			altogether fitting and proper that we should do this. But, in a
+			larger sense, we cannot dedicate, we cannot consecrate, we cannot
+			hallow, this ground.</p>
+		<p>The brave men, living and dead, who struggled here have
+			consecrated it, far above our poor power to add or detract. The world
+			will little note, nor long remember, what we say here, but it can
+			never forget what they did here. It is for us the living, rather, to
+			be dedicated here to the unfinished work which they who fought here
+			have thus far so nobly advanced.</p>
+		<p>It is rather for us to be here dedicated to the great task
+			remaining before us&mdash;that from these honored dead we take
+			increased devotion to that cause for which they gave the last full
+			measure of devotion&mdash;that we here highly resolve that these dead
+			shall not have died in vain&mdash;that this nation, under God, shall
+			have a new birth of freedom and that government of the people, by the
+			people, for the people, shall not perish from the earth.</p>
+
+	</div>
+
+</body>
+</html>

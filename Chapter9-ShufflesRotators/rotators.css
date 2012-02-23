@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+
+/**************
+ * 	News Feed
+ **************/
+
+#sidebar h3{
+	font-size: 1.0em;
+	font-family: Times;
+}
+
+#news-feed{
+	position: relative;
+	height: 200px;
+	width: 17em;
+	overflow: hidden;
+}
+
+#news-feed a{
+	color: #55F;
+}
+
+.headline{
+	position: absolute;
+	height: 200px;
+	top: 210px;
+	overflow: hidden;
+}
+
+.fade-slice{
+	position: absolute;
+	width: 20em;
+	height: 2px;
+	background: #efd;
+	z-index: 3;
+}
+
+/*******************
+ * 	Image Carrousel
+ *******************/
+
+#featured-books{
+	position: relative;
+	background: #ddd;
+	width: 440px;
+	height: 186px;
+	overflow: scroll;
+	margin: 1em auto;
+	padding: 0;
+	text-align: center;
+	z-index: 2;
+}
+
+#featured-books .covers{
+	position: relative;
+	width: 840px;
+	z-index: 1;
+}
+
+#featured-books a{
+	float: left;
+	margin: 10px;
+	z-index: 1;
+}
+
+#featured-books .price{
+	display: none;
+}
+
+#featured-books .control{
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	top: 0;
+}
+
+img.enlarged{
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+}
+
+img.enlarged-control{
+	position: absolute;
+	z-index: 5;
+	cursor: pointer;
+}
+
+.enlarged-price{
+	background-color: #373c40;
+	color: #fff;
+	width: 51px;
+	padding: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: right;
+	position: absolute;
+	z-index: 6;
+}

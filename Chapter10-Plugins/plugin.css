@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.list-plugins{
+	list-style: square;
+}
+
+.list-plugins a{
+	color: #55F;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 0.8em;
+}
